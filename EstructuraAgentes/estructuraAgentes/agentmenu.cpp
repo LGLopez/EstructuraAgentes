@@ -211,8 +211,10 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
     std::string myStr;
     unsigned int opt,optModify,intToModify;
 
+    system("cls");
+
     std::cout << "\t\tModificar empleado" << std::endl << std::endl;
-    std::cout << "Ingrese el nombre del agente a modificar (apellido,nombre): " << std::endl << std::endl;
+    std::cout << "Ingrese el nombre del agente a modificar (apellido,nombre): " << std::endl;
     getline(std::cin, myStr, ',');
     nameToModify.setLastName(myStr);
     getline(std::cin, myStr);
@@ -222,12 +224,17 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
     nodeToModify = aAgentList.findData(agentToModify);
 
-    agentToModify = aAgentList.retrieve(nodeToModify);
-
     system("cls");
 
+    if(nodeToModify == nullptr){
+        std::cout << "El empleado no existe." << std::endl;
+        return;
+        }
+
     do {
+        system("cls");
         std::cout << "\t\tModificar empleado" << std::endl << std::endl;
+        std::cout << aAgentList.retrieve(nodeToModify).toString(false) << std::endl << std::endl;
         std::cout << "1. Modificar Empleado" << std::endl;
         std::cout << "2. Modificar lista de empleado" << std::endl;
         std::cout << "3. Volver al menu" << std::endl;
@@ -241,7 +248,7 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
                     std::cout << "\t\tModificar empleado" << std::endl << std::endl;
 
-                    std::cout << agentToModify.toString(false) << std::endl;
+                    std::cout << aAgentList.retrieve(nodeToModify).toString(false) << std::endl;
 
                     std::cout << "1.Nombre" << std::endl;
                     std::cout << "2.Horario" << std::endl;
@@ -261,7 +268,7 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
                             getline(std::cin, myStr);
                             nameToModify.setFirstName(myStr);
 
-                            agentToModify.setName(nameToModify);
+                            aAgentList.retrieve(nodeToModify).setName(nameToModify);
 
                             break;
                         case 2:
@@ -281,32 +288,32 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
                             scheduleToModify.setEndTime(timeToModify);
 
-                            agentToModify.setSchedule(scheduleToModify);
+                            aAgentList.retrieve(nodeToModify).setSchedule(scheduleToModify);
 
                             break;
                         case 3:
                             std::cout << "Ingrese el nuevo numero de empleado:" << std::endl;
                             std::cin >> intToModify;
 
-                            agentToModify.setEmployeeNumber(intToModify);
+                            aAgentList.retrieve(nodeToModify).setEmployeeNumber(intToModify);
 
                             break;
                         case 4:
                             std::cout << "Ingrese el nuevo numero de extension:" << std::endl;
                             std::cin >> intToModify;
-                            agentToModify.setExtensionNumber(intToModify);
+                            aAgentList.retrieve(nodeToModify).setExtensionNumber(intToModify);
 
                             break;
                         case 5:
                             std::cout << "Ingrese el nuevo valor de horas trabajadas:" << std::endl;
                             std::cin >> intToModify;
-                            agentToModify.setWorkedHours(intToModify);
+                            aAgentList.retrieve(nodeToModify).setWorkedHours(intToModify);
 
                             break;
                         case 6:
                             std::cout << "Ingrese la nueva especialidad: " << std::endl;
                             getline(std::cin, myStr);
-                            agentToModify.setSpeciality(myStr);
+                            aAgentList.retrieve(nodeToModify).setSpeciality(myStr);
 
                             break;
                         case 7:
@@ -314,38 +321,27 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
                             break;
                         default:
+                            system("cls");
                             std::cout << "La opcion que eligio no es correcta, ingrese una nueva opcion:"<<std::endl;
-                            std::cin >> optModify;
-                            std::cin.ignore();
-
+                            keyToContinue();
                         }
                     }while(optModify != 7);
-                    aAgentList.retrieve(nodeToModify) = agentToModify;
                 break;
 
             case 2:
+                new CustomerMenu(aAgentList.retrieve(nodeToModify).getCustomerList());
                 break;
 
             case 3:
-
+                std::cout << "Saliendo..."<< std::endl;
                 break;
-
-
+            default:
+                system("cls");
+                std::cout << "La opcion que ingreso no es correcta, intente de nuevo:"<< std::endl;
+                keyToContinue();
             }
-
-
-
         }
-    while(opt > 3);
-
-
-
-
-
-
-
-
-
+    while(opt != 3);
     }
 
 void AgentMenu::showList(AgentList& aAgentList) {
@@ -362,6 +358,7 @@ void AgentMenu::showList(AgentList& aAgentList) {
 
         }
     while(option!= 1 and option!=0);
+    system("cls");
     std::cout << std::endl << std::endl;
 
     std::cout << aAgentList.toString(option==1);

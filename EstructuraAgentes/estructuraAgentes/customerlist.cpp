@@ -140,7 +140,6 @@ std::string CustomerList::toString() const {
     CustomerNode* temporary(anchor);
 
     std::string result;
-
     while(temporary!=nullptr){
         result += temporary->getCustomerData().toString() + "\n";
         temporary = temporary->getNext();

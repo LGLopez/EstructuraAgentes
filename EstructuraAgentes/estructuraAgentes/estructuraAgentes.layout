@@ -2,196 +2,19 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="agentlist.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-	<File name="agentnode.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="agent.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="575" topLine="0" />
+			<Cursor1 position="1688" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="agentnode.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+	<File name="customermenu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="839" topLine="0" />
+			<Cursor1 position="434" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="listexception.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="agentmenu.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="70" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="customerlist.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-		<Cursor>
-			<Cursor1 position="789" topLine="2" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="agent.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-=======
-	<File name="customernode.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="525" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="name.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-		<Cursor>
-			<Cursor1 position="1003" topLine="3" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="generalschedule.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="428" topLine="0" />
-		</Cursor>
-=======
-	<File name="customer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="113" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="agentmenu.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="11182" topLine="196" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="7" />
-			<Collapse line="10" />
-			<Collapse line="28" />
-			<Collapse line="85" />
-			<Collapse line="137" />
-			<Collapse line="144" />
-			<Collapse line="148" />
-			<Collapse line="151" />
-			<Collapse line="162" />
-			<Collapse line="170" />
-			<Collapse line="190" />
-			<Collapse line="195" />
-		</Folding>
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-	</File>
-	<File name="listexception.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="70" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="115" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="agentmenu.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="646" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="name.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="477" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="agent.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="253" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="time.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1606" topLine="0" />
-=======
-	<File name="agent.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="955" topLine="23" />
-		</Cursor>
-	</File>
-	<File name="name.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="477" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="agent.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="752" topLine="15" />
-		</Cursor>
-	</File>
-	<File name="time.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="184" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="agentlist.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="789" topLine="2" />
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-		</Cursor>
-	</File>
-	<File name="time.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="184" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="name.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="89" topLine="0" />
-		</Cursor>
-	</File>
-=======
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-	<File name="customermenu.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5303" topLine="123" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="7" />
-			<Collapse line="12" />
-			<Collapse line="15" />
-			<Collapse line="30" />
-<<<<<<< HEAD
-			<Collapse line="57" />
-			<Collapse line="86" />
-			<Collapse line="89" />
-		</Folding>
-	</File>
-	<File name="agentnode.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="839" topLine="0" />
-=======
-		</Folding>
-	</File>
-	<File name="customernode.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="246" topLine="0" />
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-		</Cursor>
-	</File>
-	<File name="customernode.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="525" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="generalschedule.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="529" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="customernode.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="246" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="customerlist.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="195" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="agentmenu.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5153" topLine="27" />
+			<Cursor1 position="12408" topLine="0" />
 		</Cursor>
 		<Folding>
 			<Collapse line="2" />
@@ -204,119 +27,57 @@
 			<Collapse line="144" />
 			<Collapse line="148" />
 			<Collapse line="151" />
+			<Collapse line="162" />
+			<Collapse line="170" />
+			<Collapse line="190" />
+			<Collapse line="195" />
+			<Collapse line="204" />
+			<Collapse line="228" />
+			<Collapse line="233" />
+			<Collapse line="243" />
+			<Collapse line="245" />
+			<Collapse line="262" />
+			<Collapse line="353" />
+			<Collapse line="370" />
+			<Collapse line="374" />
+			<Collapse line="378" />
+			<Collapse line="382" />
+			<Collapse line="386" />
 		</Folding>
 	</File>
-	<File name="customer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="customerlist.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="113" topLine="0" />
+			<Cursor1 position="3696" topLine="122" />
 		</Cursor>
 	</File>
-	<File name="customermenu.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="customernode.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="68" topLine="0" />
+			<Cursor1 position="190" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="customerlist.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+	<File name="customernode.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="999" topLine="27" />
+			<Cursor1 position="246" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="agentnode.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="customermenu.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="575" topLine="0" />
+			<Cursor1 position="4768" topLine="135" />
 		</Cursor>
 	</File>
-<<<<<<< HEAD
-	<File name="agentlist.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+	<File name="agentlist.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1602" topLine="9" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="6" />
-			<Collapse line="7" />
-			<Collapse line="8" />
-			<Collapse line="26" />
-			<Collapse line="29" />
-			<Collapse line="30" />
-			<Collapse line="38" />
-			<Collapse line="42" />
-			<Collapse line="46" />
-			<Collapse line="48" />
-			<Collapse line="57" />
-			<Collapse line="61" />
-			<Collapse line="67" />
-			<Collapse line="71" />
-			<Collapse line="73" />
-			<Collapse line="77" />
-			<Collapse line="83" />
-			<Collapse line="92" />
-			<Collapse line="104" />
-			<Collapse line="114" />
-			<Collapse line="115" />
-			<Collapse line="121" />
-			<Collapse line="122" />
-			<Collapse line="128" />
-			<Collapse line="135" />
-			<Collapse line="142" />
-			<Collapse line="154" />
-			<Collapse line="155" />
-			<Collapse line="161" />
-			<Collapse line="166" />
-			<Collapse line="175" />
-			<Collapse line="179" />
-			<Collapse line="183" />
-			<Collapse line="197" />
-			<Collapse line="201" />
-			<Collapse line="205" />
-		</Folding>
-	</File>
-	<File name="customer.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="639" topLine="11" />
-=======
-	<File name="customermenu.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="68" topLine="0" />
+			<Cursor1 position="4064" topLine="150" />
 		</Cursor>
 	</File>
-	<File name="generalschedule.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="customer.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="428" topLine="0" />
+			<Cursor1 position="610" topLine="13" />
 		</Cursor>
 	</File>
-	<File name="agentmenu.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+	<File name="customer.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="646" topLine="3" />
+			<Cursor1 position="421" topLine="0" />
 		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="115" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="customerlist.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="195" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="agentlist.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3476" topLine="21" />
->>>>>>> 23df6ef44bf6b884bb5bf6c92773eee355b5abfb
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="6" />
-			<Collapse line="7" />
-			<Collapse line="8" />
-			<Collapse line="26" />
-			<Collapse line="29" />
-			<Collapse line="30" />
-			<Collapse line="38" />
-			<Collapse line="42" />
-			<Collapse line="46" />
-			<Collapse line="48" />
-		</Folding>
 	</File>
 </CodeBlocks_layout_file>

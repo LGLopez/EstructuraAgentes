@@ -20,17 +20,9 @@ void Customer::setDuration(const int& aDuration) {
     }
 
 std::string Customer::toString() const{
-    std::string result;
-
-    result = result + "Nombre:           " + name.toString() + "\n";
-    result = result + "Hora de llamada:  " + callTime.toString() + "\n";
-    result = result + "Duracion llamada: " + std::to_string(duration) + " seg." + "\n";
-    return result;
-
-
-//    return "Nombre: " + name.toString() + "\n" +
-//           "Hora de llamada: " + callTime.toString() + "\n" +
-//           "Duracion llamada: " + std::to_string(duration) + " seg." + "\n";
+    return "Nombre: " + name.toString() + "\n" +
+           "Hora de llamada: " + callTime.toString() + "\n" +
+           "Duracion llamada: " + std::to_string(duration) + " seg." + "\n";
     }
 
 Name Customer::getName() const{

@@ -163,8 +163,8 @@ std::string AgentList::toString(const bool& addList) const {
     std::string result;
 
     AgentNode* aux(header->getNext());
-
     while(aux != header){
+        result += "*********************************************\n\t\tAgente\n";
         result += aux->getData().toString(addList) + "\n";
 
         aux = aux->getNext();

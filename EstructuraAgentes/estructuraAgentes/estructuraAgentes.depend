@@ -597,3 +597,111 @@
 1553186265 source:c:\programacion\git\estructuraagentes\estructuraagentes\estructuraagentes\agentmenu.cpp
 	"agentmenu.h"
 
+1553199725 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.cpp
+	"agent.h"
+
+1552578780 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.h
+	<iostream>
+	<string>
+	"name.h"
+	"generalschedule.h"
+	"customerlist.h"
+
+1552578788 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1552578790 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\generalschedule.h
+	"time.h"
+
+1552578788 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1552578784 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1552578790 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1552578784 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customernode.h
+	"customer.h"
+
+1552578784 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1553199838 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.cpp
+	"agentlist.h"
+
+1552578782 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.h
+	<iostream>
+	<string>
+	"agent.h"
+	"agentnode.h"
+
+1552578782 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentnode.h
+	<exception>
+	<string>
+	"agent.h"
+
+1553210477 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.cpp
+	"agentmenu.h"
+
+1552578782 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"time.h"
+	"customerlist.h"
+	"agentlist.h"
+	"name.h"
+	"generalschedule.h"
+	"listexception.h"
+	"customermenu.h"
+
+1552578784 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1552578780 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentnode.cpp
+	"agentnode.h"
+
+1553198939 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customer.cpp
+	"customer.h"
+
+1553199752 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1553199600 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1552578784 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1552578788 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\generalschedule.cpp
+	"generalschedule.h"
+
+1552578790 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\main.cpp
+	<iostream>
+	"agentmenu.h"
+	"agentlist.h"
+
+1552578790 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\name.cpp
+	"name.h"
+
+1552578790 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.cpp
+	"time.h"
+

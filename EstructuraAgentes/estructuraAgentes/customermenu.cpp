@@ -143,7 +143,6 @@ void CustomerMenu::modifyCustomer(CustomerList& aCustomerList) {
     Customer customerToModify;
     CustomerNode* auxiliar;
     Name nameToModify;
-    Time timeToModify;
 
     system("cls");
     std::cout << "Desea ver la lista de clientes agregados[1=si/0=no]: " << std::endl;
@@ -162,17 +161,11 @@ void CustomerMenu::modifyCustomer(CustomerList& aCustomerList) {
 
     auxiliar = aCustomerList.findData(customerToModify);
 
-    customerToModify = auxiliar->getCustomerData();
-
     std::cout << "Ingrese la nueva duracion de la llamada: ";
     std::cin >> newDuration;
     std::cin.ignore();
 
-    aCustomerList.retrieve(aCustomerList.findData(customerToModify)).setDuration(newDuration);
-
-//    customerToModify.setDuration(newDuration);
-//
-//    auxiliar->setCustomerData(customerToModify);
+    aCustomerList.retrieve(auxiliar).setDuration(newDuration);
 
     std::cout << "Duracion de la llamada modificada." << std::endl;
 
@@ -185,7 +178,7 @@ void CustomerMenu::showList(CustomerList& aCustomerList) {
         std::cout << "No hay clientes agregados" << std::endl;
         }
     else{
-        std::cout << "Listado de clientes" << std::endl << std::endl;
+        std::cout << "\t\tListado de clientes" << std::endl << std::endl;
         }
     std::cout << aCustomerList.toString();
     keyToContinue();

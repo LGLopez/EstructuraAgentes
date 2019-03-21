@@ -39,7 +39,8 @@ std::string Agent::toString(const bool& addList) const {
     stringToShow += "Especialidad:     " + speciality + "\n";
 
     if(addList == true){
-        stringToShow += "\nLista de clientes:\n";
+        stringToShow += "\n--------------------------------------------";
+        stringToShow += "\n\t\tLista de clientes\n";
         stringToShow += customerList.toString();
         stringToShow += "\n\n";
         }

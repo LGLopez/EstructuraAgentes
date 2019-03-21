@@ -168,7 +168,7 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
     unsigned int option;
     bool correctPosition = false;
 
-    while(!correctPosition){
+    while(!correctPosition) {
         system("cls");
 
         std::cout << "Desea ver la lista de Agentes [1=si,0=no]: " << std::endl;
@@ -188,12 +188,12 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
         posToDelete = aAgentList.findData(agentToDelete);
 
 
-        if(posToDelete == nullptr){
+        if(posToDelete == nullptr) {
             std::cout << "El agente que ingreso no existe." << std::endl;
             correctPosition = true;
             keyToContinue();
             }
-        else{
+        else {
             aAgentList.deleteData(posToDelete);
             std::cout << "El agente ha sido eliminado." << std::endl;
             correctPosition = true;
@@ -202,7 +202,149 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
         }
     }
 
-void AgentMenu::modifyAgent(AgentList&) {
+void AgentMenu::modifyAgent(AgentList& aAgentList) {
+    Agent agentToModify;
+    Name nameToModify;
+    GeneralSchedule scheduleToModify;
+    Time timeToModify;
+    AgentNode* nodeToModify;
+    std::string myStr;
+    unsigned int opt,optModify,intToModify;
+
+    std::cout << "\t\tModificar empleado" << std::endl << std::endl;
+    std::cout << "Ingrese el nombre del agente a modificar (apellido,nombre): " << std::endl << std::endl;
+    getline(std::cin, myStr, ',');
+    nameToModify.setLastName(myStr);
+    getline(std::cin, myStr);
+    nameToModify.setFirstName(myStr);
+
+    agentToModify.setName(nameToModify);
+
+    nodeToModify = aAgentList.findData(agentToModify);
+
+    agentToModify = aAgentList.retrieve(nodeToModify);
+
+    system("cls");
+
+    do {
+        std::cout << "\t\tModificar empleado" << std::endl << std::endl;
+        std::cout << "1. Modificar Empleado" << std::endl;
+        std::cout << "2. Modificar lista de empleado" << std::endl;
+        std::cout << "3. Volver al menu" << std::endl;
+        std::cin >> opt;
+        std::cin.ignore();
+
+        switch(opt) {
+            case 1:
+                do{
+                    system("cls");
+
+                    std::cout << "\t\tModificar empleado" << std::endl << std::endl;
+
+                    std::cout << agentToModify.toString(false) << std::endl;
+
+                    std::cout << "1.Nombre" << std::endl;
+                    std::cout << "2.Horario" << std::endl;
+                    std::cout << "3.Numero de empleado" << std::endl;
+                    std::cout << "4.Numero de extension" << std::endl;
+                    std::cout << "5.Horas trabajadas" << std::endl;
+                    std::cout << "6.Especialidad" << std::endl;
+                    std::cout << "7.Volver al menu anterior" << std::endl;
+                    std::cin >> optModify;
+                    std::cin.ignore();
+
+                    switch(optModify){
+                        case 1:
+                            std::cout << "Ingrese la correccion del nombre (apellido,nombre):" << std::endl;
+                            getline(std::cin, myStr,',');
+                            nameToModify.setLastName(myStr);
+                            getline(std::cin, myStr);
+                            nameToModify.setFirstName(myStr);
+
+                            agentToModify.setName(nameToModify);
+
+                            break;
+                        case 2:
+                            std::cout << "Ingrese el nuevo hora de entrada (HH:MM):" << std::endl;
+                            getline(std::cin,myStr, ':');
+                            timeToModify.setHours(atoi(myStr.c_str()));
+                            getline(std::cin, myStr);
+                            timeToModify.setMinutes(atoi(myStr.c_str()));
+
+                            scheduleToModify.setStartTime(timeToModify);
+
+                            std::cout << "Ingrese el nuevo hora de salida (HH:MM):" << std::endl;
+                            getline(std::cin,myStr, ':');
+                            timeToModify.setHours(atoi(myStr.c_str()));
+                            getline(std::cin, myStr);
+                            timeToModify.setMinutes(atoi(myStr.c_str()));
+
+                            scheduleToModify.setEndTime(timeToModify);
+
+                            agentToModify.setSchedule(scheduleToModify);
+
+                            break;
+                        case 3:
+                            std::cout << "Ingrese el nuevo numero de empleado:" << std::endl;
+                            std::cin >> intToModify;
+
+                            agentToModify.setEmployeeNumber(intToModify);
+
+                            break;
+                        case 4:
+                            std::cout << "Ingrese el nuevo numero de extension:" << std::endl;
+                            std::cin >> intToModify;
+                            agentToModify.setExtensionNumber(intToModify);
+
+                            break;
+                        case 5:
+                            std::cout << "Ingrese el nuevo valor de horas trabajadas:" << std::endl;
+                            std::cin >> intToModify;
+                            agentToModify.setWorkedHours(intToModify);
+
+                            break;
+                        case 6:
+                            std::cout << "Ingrese la nueva especialidad: " << std::endl;
+                            getline(std::cin, myStr);
+                            agentToModify.setSpeciality(myStr);
+
+                            break;
+                        case 7:
+                            std::cout << "Saliendo..." << std::endl;
+
+                            break;
+                        default:
+                            std::cout << "La opcion que eligio no es correcta, ingrese una nueva opcion:"<<std::endl;
+                            std::cin >> optModify;
+                            std::cin.ignore();
+
+                        }
+                    }while(optModify != 7);
+                    aAgentList.retrieve(nodeToModify) = agentToModify;
+                break;
+
+            case 2:
+                break;
+
+            case 3:
+
+                break;
+
+
+            }
+
+
+
+        }
+    while(opt > 3);
+
+
+
+
+
+
+
+
 
     }
 
@@ -218,7 +360,8 @@ void AgentMenu::showList(AgentList& aAgentList) {
         std::cin >> option;
         std::cin.ignore();
 
-        }while(option!= 1 and option!=0);
+        }
+    while(option!= 1 and option!=0);
     std::cout << std::endl << std::endl;
 
     std::cout << aAgentList.toString(option==1);

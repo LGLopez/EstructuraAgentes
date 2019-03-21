@@ -168,9 +168,11 @@ void CustomerMenu::modifyCustomer(CustomerList& aCustomerList) {
     std::cin >> newDuration;
     std::cin.ignore();
 
-    customerToModify.setDuration(newDuration);
+    aCustomerList.retrieve(aCustomerList.findData(customerToModify)).setDuration(newDuration);
 
-    auxiliar->setCustomerData(customerToModify);
+//    customerToModify.setDuration(newDuration);
+//
+//    auxiliar->setCustomerData(customerToModify);
 
     std::cout << "Duracion de la llamada modificada." << std::endl;
 

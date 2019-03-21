@@ -1,0 +1,491 @@
+# depslib dependency file v1.0
+1550934088 source:c:\users\destr\documents\c++\estructuraagentes\main.cpp
+	<iostream>
+	"customermenu.h"
+	"customerlist.h"
+
+1550764260 ist.h"
+
+1550156744 c:\users\destr\documents\c++\estructuraagentes\agentlist.h
+	<iostream>
+	<string>
+	"agent.h"
+	"agentnode.h"
+
+1550156744 .h"
+
+1550156720 c:\users\destr\documents\c++\estructuraagentes\agent.h
+	<iostream>
+	<string>
+	"name.h"
+	"generalschedule.h"
+	"customerlist.h"
+
+1550934092 c:\users\destr\documents\c++\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1550764266 
+
+1550156738 c:\users\destr\documents\c++\estructuraagentes\generalschedule.h
+	"time.h"
+
+1550934094 c:\users\destr\documents\c++\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1550934080 c:\users\destr\documents\c++\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1550764260 h"
+
+1550934088 c:\users\destr\documents\c++\estructuraagentes\customernode.h
+	"customer.h"
+
+1550934080 c:\users\destr\documents\c++\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1550156728 c:\users\destr\documents\c++\estructuraagentes\agentnode.h
+
+1550934084 source:c:\users\destr\documents\c++\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1550764260 ode.h"
+
+1550934090 source:c:\users\destr\documents\c++\estructuraagentes\name.cpp
+	"name.h"
+
+1550934080 source:c:\users\destr\documents\c++\estructuraagentes\customer.cpp
+	"customer.h"
+
+1550934080 source:c:\users\destr\documents\c++\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1550934092 source:c:\users\destr\documents\c++\estructuraagentes\time.cpp
+	"time.h"
+
+1551205108 source:c:\users\destr\documents\c++\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1550764260 enu.h"
+
+1550934084 c:\users\destr\documents\c++\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1550764260 tion.h"
+
+1550934090 c:\users\destr\documents\c++\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1550764260 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customer.cpp
+	"customer.h"
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1550764890 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1550764266 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customernode.h
+	"customer.h"
+
+1550764260 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1550764260 c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1550764260 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1550764260 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\main.cpp
+	<iostream>
+	"customermenu.h"
+	"customerlist.h"
+
+1550764260 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\name.cpp
+	"name.h"
+
+1550764266 source:c:\users\destr\downloads\estructuraagentes-20190221t154959z-001\estructuraagentes\time.cpp
+	"time.h"
+
+1551355740 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customer.cpp
+	"customer.h"
+
+1551355740 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1551355748 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/name.h
+	<iostream>
+	<string>
+
+1551355748 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1551355740 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customerlist.cpp
+	"customerlist.h"
+
+1551355738 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1551355742 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/listexception.h
+	<exception>
+	<string>
+
+1551355742 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customernode.h
+	"customer.h"
+
+1551355744 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customernode.cpp
+	"customernode.h"
+
+1551355744 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/main.cpp
+	<iostream>
+	"customermenu.h"
+	"customerlist.h"
+
+1551355742 /home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1551355746 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/name.cpp
+	"name.h"
+
+1551355748 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/time.cpp
+	"time.h"
+
+1551368634 source:/home/luis/Downloads/estrucutraAgentes intento-20190228T150410Z-001/estrucutraAgentes intento/estructuraAgentes/customermenu.cpp
+	"customermenu.h"
+
+1551392230 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customer.cpp
+	"customer.h"
+
+1551355740 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1551355748 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1551355748 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1551355740 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1551355738 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1551355742 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1551355742 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customernode.h
+	"customer.h"
+
+1551355744 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1551355744 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\main.cpp
+	<iostream>
+	"customermenu.h"
+	"customerlist.h"
+
+1551355742 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1551355746 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\name.cpp
+	"name.h"
+
+1551355748 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\time.cpp
+	"time.h"
+
+1551392139 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1551394649 source:c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\generalschedule.cpp
+	"generalschedule.h"
+
+1551394607 c:\users\destr\downloads\estrucutraagentes intento-20190228t150410z-001\estrucutraagentes intento\estructuraagentes\generalschedule.h
+	"time.h"
+
+1552578782 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customer.cpp
+	"customer.h"
+
+1552578784 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1552578788 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1552578788 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1552578784 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1552578784 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1552578790 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1552578784 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customernode.h
+	"customer.h"
+
+1552578784 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1552578788 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\generalschedule.cpp
+	"generalschedule.h"
+
+1552578790 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\generalschedule.h
+	"time.h"
+
+1552578790 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\main.cpp
+	<iostream>
+	"agentmenu.h"
+	"agentlist.h"
+
+1552578784 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1552578790 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\name.cpp
+	"name.h"
+
+1552578790 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\time.cpp
+	"time.h"
+
+1552578784 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1552578780 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentnode.cpp
+	"agentnode.h"
+
+1552578782 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentnode.h
+	<exception>
+	<string>
+	"agent.h"
+
+1552578780 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agent.h
+	<iostream>
+	<string>
+	"name.h"
+	"generalschedule.h"
+	"customerlist.h"
+
+1552578780 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agent.cpp
+	"agent.h"
+
+1552578780 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentlist.cpp
+	"agentlist.h"
+
+1552578782 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentlist.h
+	<iostream>
+	<string>
+	"agent.h"
+	"agentnode.h"
+
+1552580023 source:c:\programacion\estructuraagentes\agent.cpp
+	"agent.h"
+
+1552576948 c:\programacion\estructuraagentes\agent.h
+	<iostream>
+	<string>
+	"name.h"
+	"generalschedule.h"
+	"customerlist.h"
+
+1552576947 c:\programacion\estructuraagentes\name.h
+	<iostream>
+	<string>
+
+1552576947 c:\programacion\estructuraagentes\generalschedule.h
+	"time.h"
+
+1552576948 c:\programacion\estructuraagentes\time.h
+	<iostream>
+	<string>
+	<cstdlib>
+
+1552576948 c:\programacion\estructuraagentes\customerlist.h
+	<iostream>
+	<string>
+	"listexception.h"
+	"customernode.h"
+	"customer.h"
+
+1552576948 c:\programacion\estructuraagentes\listexception.h
+	<exception>
+	<string>
+
+1552576948 c:\programacion\estructuraagentes\customernode.h
+	"customer.h"
+
+1552576948 c:\programacion\estructuraagentes\customer.h
+	<string>
+	"name.h"
+	"time.h"
+
+1552576948 source:c:\programacion\estructuraagentes\agentlist.cpp
+	"agentlist.h"
+
+1552576948 c:\programacion\estructuraagentes\agentlist.h
+	<iostream>
+	<string>
+	"agent.h"
+	"agentnode.h"
+
+1552576948 c:\programacion\estructuraagentes\agentnode.h
+	<exception>
+	<string>
+	"agent.h"
+
+1552576948 source:c:\programacion\estructuraagentes\agentnode.cpp
+	"agentnode.h"
+
+1552576948 source:c:\programacion\estructuraagentes\customer.cpp
+	"customer.h"
+
+1552603155 source:c:\programacion\estructuraagentes\customerlist.cpp
+	"customerlist.h"
+
+1552576948 source:c:\programacion\estructuraagentes\customermenu.cpp
+	"customermenu.h"
+
+1552576948 c:\programacion\estructuraagentes\customermenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"customerlist.h"
+	"listexception.h"
+
+1552576948 source:c:\programacion\estructuraagentes\customernode.cpp
+	"customernode.h"
+
+1552576948 source:c:\programacion\estructuraagentes\generalschedule.cpp
+	"generalschedule.h"
+
+1552576948 source:c:\programacion\estructuraagentes\main.cpp
+	<iostream>
+	"agentmenu.h"
+	"agentlist.h"
+
+1552578855 source:c:\programacion\estructuraagentes\name.cpp
+	"name.h"
+
+1552576947 source:c:\programacion\estructuraagentes\time.cpp
+	"time.h"
+
+1552622202 source:c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentmenu.cpp
+	"agentmenu.h"
+
+1552578782 c:\users\destr\documents\c++\seminario de estructura de datos\estructuraagentes\agentmenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"time.h"
+	"customerlist.h"
+	"agentlist.h"
+	"name.h"
+	"generalschedule.h"
+	"listexception.h"
+	"customermenu.h"
+
+1552578599 source:c:\programacion\estructuraagentes\agentmenu.cpp
+	"agentmenu.h"
+
+1552577528 c:\programacion\estructuraagentes\agentmenu.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<cstdio>
+	"time.h"
+	"customerlist.h"
+	"agentlist.h"
+	"name.h"
+	"generalschedule.h"
+	"listexception.h"
+	"customermenu.h"
+

@@ -36,13 +36,91 @@ bool AgentList::isValidPos(AgentNode* position) const {
     return false;
     }
 
-void AgentList::sortByName(AgentNode*, AgentNode*) {
+void AgentList::sortByName(AgentNode* leftEdge, AgentNode* rightEdge) {
+    if(leftEdge == rightEdge){
+        return;
+        }
 
+    if(leftEdge->getNext() == rightEdge){
+        if(leftEdge->getData().getName() > rightEdge->getData().getName()){
+            ptrSwapper(leftEdge,rightEdge);
+            }
+        return;
+        }
+
+    AgentNode* i(leftEdge);
+    AgentNode* j(rightEdge);
+
+    while(i != j){
+        while(i != j and i->getData().getName() <= rightEdge->getData().getName()){
+            i = i->getNext();
+            }
+        while(i != j and j->getData().getName() >= rightEdge->getData().getName()){
+            j = j->getPrev();
+            }
+
+        if(i != j){
+            ptrSwapper(i,j);
+            }
+        }
+
+    if(i != rightEdge){
+        ptrSwapper(i,rightEdge);
+        }
+    if(i != leftEdge){
+        sortByName(leftEdge,i->getPrev());
+        }
+    if(i != rightEdge){
+        sortByName(i->getNext(), rightEdge);
+        }
     }
 
-void AgentList::sortBySpeciality(AgentNode*, AgentNode*) {
+void AgentList::sortBySpeciality(AgentNode* leftEdge, AgentNode* rightEdge) {
+    if(leftEdge == rightEdge){
+        return;
+        }
 
+    if(leftEdge->getNext() == rightEdge){
+        if(leftEdge->getData().getSpeciality() > rightEdge->getData().getSpeciality()){
+            ptrSwapper(leftEdge,rightEdge);
+            }
+        return;
+        }
+
+    AgentNode* i(leftEdge);
+    AgentNode* j(rightEdge);
+
+    while(i != j){
+        while(i != j and i->getData().getSpeciality() <= rightEdge->getData().getSpeciality()){
+            i = i->getNext();
+            }
+        while(i != j and j->getData().getSpeciality() >= rightEdge->getData().getSpeciality()){
+            j = j->getPrev();
+            }
+
+        if(i != j){
+            ptrSwapper(i,j);
+            }
+        }
+
+    if(i != rightEdge){
+        ptrSwapper(i,rightEdge);
+        }
+    if(i != leftEdge){
+        sortByName(leftEdge,i->getPrev());
+        }
+    if(i != rightEdge){
+        sortByName(i->getNext(), rightEdge);
+        }
     }
+
+void AgentList::ptrSwapper(AgentNode* a, AgentNode* b){
+    Agent* auxiliar(a->getDataPtr());
+
+    a->setDataPtr(b->getDataPtr());
+    b->setDataPtr(auxiliar);
+    }
+
 
 AgentList::AgentList() : header(new AgentNode) {
 
@@ -174,11 +252,11 @@ std::string AgentList::toString(const bool& addList) const {
     }
 
 void AgentList::sortByName() {
-
+    sortByName(header->getNext(), header->getPrev());
     }
 
 void AgentList::sortBySpeciality() {
-
+    sortByName(header->getNext(), header->getPrev());
     }
 
 void AgentList::deleteAll() {

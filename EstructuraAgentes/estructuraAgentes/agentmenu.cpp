@@ -17,10 +17,12 @@ void AgentMenu::mainMenu(AgentList& aAgentList) {
         std::cout << "2. Eliminar Agentes" << std::endl;
         std::cout << "3. Modifiar Agentes" << std::endl;
         std::cout << "4. Mostrar Agentes" << std::endl;
-        std::cout << "5. Ordenar Agentes" << std::endl;
-        std::cout << "6. Leer del disco" << std::endl;
-        std::cout << "7. Escribir al disco" << std::endl;
-        std::cout << "8. Salir" << std::endl << std::endl;
+        std::cout << "5. buscar" << std::endl;
+        std::cout << "6. Ordenar Agentes" << std::endl;
+        std::cout << "7. Leer del disco" << std::endl;
+        std::cout << "8. Escribir al disco" << std::endl;
+        std::cout << "9. Eliminar todos los agentes" << std::endl;
+        std::cout << "10. Salir" << std::endl << std::endl;
 
         std::cout << "Elija la opcion deseada: " << std::endl;
         std::cin >> option;
@@ -40,26 +42,32 @@ void AgentMenu::mainMenu(AgentList& aAgentList) {
                 showList(aAgentList);
                 break;
             case 5:
-                sortList(aAgentList);
+                searchAgent(aAgentList);
                 break;
             case 6:
-                readFromDisk(aAgentList);
+                sortList(aAgentList);
                 break;
             case 7:
-                writeToDisk(aAgentList);
+                readFromDisk(aAgentList);
                 break;
             case 8:
+                writeToDisk(aAgentList);
+                break;
+            case 9:
+                aAgentList.deleteAll();
+                std::cout << "Todos los agentes fueron eliminados." << std::endl;
+                keyToContinue();
+                break;
+            case 10:
                 exit();
                 break;
 
-
             default:
                 std::cout << "La opcion elegida no es valida, intente de nuevo";
-                std::cin >> option;
-                std::cin.ignore();
+                keyToContinue();
             }
         }
-    while(option!=8);
+    while(option!=10);
     }
 
 void AgentMenu::addAgent(AgentList& aAgentList) {
@@ -135,16 +143,16 @@ void AgentMenu::addAgent(AgentList& aAgentList) {
 
     myAgent.setSpeciality(myString);
 
-    do {
-        std::cout << "Desea agregar clientes para el agente [1=si,0=no]: " << std::endl;
-        std::cin >> myInt;
-        std::cin.ignore();
-        }
-    while(myInt!=1 and myInt!=0);
+//    do {
+//        std::cout << "Desea agregar clientes para el agente [1=si,0=no]: " << std::endl;
+//        std::cin >> myInt;
+//        std::cin.ignore();
+//        }
+//    while(myInt!=1 and myInt!=0);
 
-    if(myInt == 1) {
+//    if(myInt == 1) {
         new CustomerMenu(myAgent.getCustomerList());
-        }
+//        }
 
     try {
         aAgentList.insertData(aAgentList.getLastPos(), myAgent);
@@ -174,6 +182,7 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
         std::cout << "Desea ver la lista de Agentes [1=si,0=no]: " << std::endl;
         std::cin >> option;
         std::cin.ignore();
+        system("cls");
         if(option)
             showList(aAgentList);
 
@@ -187,18 +196,23 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
 
         posToDelete = aAgentList.findData(agentToDelete);
 
-
-        if(posToDelete == nullptr) {
-            std::cout << "El agente que ingreso no existe." << std::endl;
-            correctPosition = true;
-            keyToContinue();
+        std::cout << "Esta seguro que desea eliminar este agente [0=no,1=si]:" << std::endl;
+        std::cin >> option;
+        std::cin.ignore();
+        if(option == 1){
+            if(posToDelete == nullptr) {
+                std::cout << "El agente que ingreso no existe." << std::endl;
+                correctPosition = true;
+                keyToContinue();
+                }
+            else {
+                aAgentList.deleteData(posToDelete);
+                std::cout << "El agente ha sido eliminado." << std::endl;
+                correctPosition = true;
+                keyToContinue();
+                }
             }
-        else {
-            aAgentList.deleteData(posToDelete);
-            std::cout << "El agente ha sido eliminado." << std::endl;
-            correctPosition = true;
-            keyToContinue();
-            }
+        correctPosition = true;
         }
     }
 
@@ -349,27 +363,81 @@ void AgentMenu::showList(AgentList& aAgentList) {
 
     system("cls");
 
-    std::cout << "\t\tLista de agentes" << std::endl << std::endl;
+    if(!aAgentList.isEmpty()){
+        std::cout << "\t\tLista de agentes" << std::endl << std::endl;
 
-    do {
-        std::cout << "Desea que los agentes se muestren con sus clientes [1=si,0=no]: " << std::endl;
-        std::cin >> option;
-        std::cin.ignore();
+        do {
+            std::cout << "Desea que los agentes se muestren con sus clientes [1=si,0=no]: " << std::endl;
+            std::cin >> option;
+            std::cin.ignore();
 
+            }
+        while(option!= 1 and option!=0);
+        system("cls");
+        std::cout << std::endl << std::endl;
+
+        std::cout << aAgentList.toString(option==1);
+
+        std::cout << std::endl << std::endl;
         }
-    while(option!= 1 and option!=0);
-    system("cls");
-    std::cout << std::endl << std::endl;
-
-    std::cout << aAgentList.toString(option==1);
-
-    std::cout << std::endl << std::endl;
-
+    else{
+        std::cout << "No hay agentes en la lista" << std::endl << std::endl;
+        }
     keyToContinue();
     }
 
-void AgentMenu::sortList(AgentList&) {
+void AgentMenu::searchAgent(AgentList& aAgentList){
+    Agent agentToFind;
+    Name nameToFind;
+    std::string myStr;
 
+    system("cls");
+
+    std::cout << "\t\tBuscar empleado" << std::endl << std::endl;
+    std::cout << "Ingrese el nombre del agente que desea buscar (apellido,nombre): " << std::endl;
+    getline(std::cin, myStr, ',');
+    nameToFind.setLastName(myStr);
+    getline(std::cin, myStr);
+    nameToFind.setFirstName(myStr);
+
+    agentToFind.setName(nameToFind);
+
+    std::cout << aAgentList.retrieve(aAgentList.findData(agentToFind)).toString(true) << std::endl;
+    keyToContinue();
+    }
+
+void AgentMenu::sortList(AgentList& aAgentList) {
+    system("cls");
+    unsigned int opt;
+
+    std::cout << "Seleccione como desea ordenar a los agentes:" << std::endl;
+    std::cout << "1. Ordenar por nombre" << std::endl;
+    std::cout << "2. Ordenar por Especialidad" << std::endl;
+    std::cout << "3. Salir sin ordenar" << std::endl;
+    std::cin >> opt;
+    std::cin.ignore();
+
+    switch(opt){
+        case 1:
+            std::cout << "Ordenando..." << std::endl;
+            aAgentList.sortByName();
+            std::cout << "Agentes ordenados." << std::endl;
+            keyToContinue();
+
+            break;
+        case 2:
+            std::cout << "Ordenando..." << std::endl;
+            aAgentList.sortBySpeciality();
+            std::cout << "Agentes ordenados por especialidad." << std::endl;
+            keyToContinue();
+
+            break;
+        case 3:
+            std::cout << "Saliendo"<<std::endl;
+            break;
+        default:
+            std::cout << "La opcion no es correcta.";
+        }
     }
 
 void AgentMenu::writeToDisk(AgentList&) {

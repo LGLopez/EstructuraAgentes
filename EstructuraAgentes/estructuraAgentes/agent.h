@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 #include "name.h"
 #include "generalschedule.h"
@@ -27,9 +28,9 @@ public:
     void setEmployeeNumber(const unsigned int&);
     void setExtensionNumber(const unsigned int&);
     void setWorkedHours(const unsigned int&);
-    void setSpeciality(const std::string&);
+    void setSpeciality(std::string&);
 
-    std::string toString(const bool&) const;
+    std::string toString(const bool&) ;
 
     Name getName() const;
     GeneralSchedule getSchedule() const;

@@ -25,6 +25,7 @@ private:
     void deleteAgent(AgentList&);
     void modifyAgent(AgentList&);
     void showList(AgentList&);
+    void searchAgent(AgentList&);
 
     void sortList(AgentList&);
 

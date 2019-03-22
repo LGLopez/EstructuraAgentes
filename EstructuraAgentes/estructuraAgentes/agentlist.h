@@ -18,6 +18,7 @@ private:
     void sortByName(AgentNode*, AgentNode*);
     void sortBySpeciality(AgentNode*, AgentNode*);
 
+    void ptrSwapper(AgentNode*, AgentNode*);
 public:
     AgentList();
     AgentList(const AgentList&);

@@ -24,11 +24,20 @@ void Agent::setWorkedHours(const unsigned int& aWorkedHours) {
     workedHours = aWorkedHours;
     }
 
-void Agent::setSpeciality(const std::string& aSpeciality) {
+void Agent::setSpeciality(std::string& aSpeciality) {
+    std::transform(aSpeciality.begin(), aSpeciality.end(), aSpeciality.begin(), ::toupper);
+
+    while(aSpeciality != "SERVIDORES" and aSpeciality != "ESCRITORIO" and aSpeciality != "PORTATILES" and aSpeciality != "LINUX" and aSpeciality != "IMPRESORAS" and aSpeciality != "REDES"){
+        std::cout << "Opciones validas: Servidores, Escritorio, Portatiles, Linux, Impresoras o Redes." << std::endl;
+        std::cout << "La especialidad es incorrecta, Ingrese de nuevo:" << std::endl;
+        getline(std::cin, aSpeciality);
+        std::transform(aSpeciality.begin(), aSpeciality.end(), aSpeciality.begin(), ::toupper);
+        }
+
     speciality = aSpeciality;
     }
 
-std::string Agent::toString(const bool& addList) const {
+std::string Agent::toString(const bool& addList) {
     std::string stringToShow;
 
     stringToShow += "Nombre:           " + name.toString() + "\n";
@@ -39,10 +48,12 @@ std::string Agent::toString(const bool& addList) const {
     stringToShow += "Especialidad:     " + speciality + "\n";
 
     if(addList == true){
-        stringToShow += "\n--------------------------------------------";
-        stringToShow += "\n\t\tLista de clientes\n";
-        stringToShow += customerList.toString();
-        stringToShow += "\n\n";
+        if(!customerList.isEmpty()){
+            stringToShow += "\n--------------------------------------------";
+            stringToShow += "\n\t\tLista de clientes\n";
+            stringToShow += customerList.toString();
+            stringToShow += "\n\n";
+            }
         }
 
     return stringToShow;

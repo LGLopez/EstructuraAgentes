@@ -597,12 +597,13 @@
 1553186265 source:c:\programacion\git\estructuraagentes\estructuraagentes\estructuraagentes\agentmenu.cpp
 	"agentmenu.h"
 
-1553199725 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.cpp
+1553224724 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.cpp
 	"agent.h"
 
-1552578780 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.h
+1553223179 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agent.h
 	<iostream>
 	<string>
+	<algorithm>
 	"name.h"
 	"generalschedule.h"
 	"customerlist.h"
@@ -614,7 +615,7 @@
 1552578790 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\generalschedule.h
 	"time.h"
 
-1552578788 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.h
+1553224184 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.h
 	<iostream>
 	<string>
 	<cstdlib>
@@ -638,10 +639,10 @@
 	"name.h"
 	"time.h"
 
-1553199838 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.cpp
+1553212935 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.cpp
 	"agentlist.h"
 
-1552578782 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.h
+1553211647 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentlist.h
 	<iostream>
 	<string>
 	"agent.h"
@@ -652,10 +653,10 @@
 	<string>
 	"agent.h"
 
-1553210477 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.cpp
+1553227154 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.cpp
 	"agentmenu.h"
 
-1552578782 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.h
+1553225514 c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\agentmenu.h
 	<iostream>
 	<string>
 	<cstdlib>
@@ -682,7 +683,7 @@
 1553198939 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customer.cpp
 	"customer.h"
 
-1553199752 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customerlist.cpp
+1553221798 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customerlist.cpp
 	"customerlist.h"
 
 1553199600 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\customermenu.cpp
@@ -702,6 +703,6 @@
 1552578790 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\name.cpp
 	"name.h"
 
-1552578790 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.cpp
+1553224185 source:c:\users\destr\documents\c++\git\estructuraagentes\estructuraagentes\time.cpp
 	"time.h"
 

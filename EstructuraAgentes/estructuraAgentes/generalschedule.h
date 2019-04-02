@@ -1,6 +1,8 @@
 #ifndef GENERALSCHEDULE_H_INCLUDED
 #define GENERALSCHEDULE_H_INCLUDED
 
+#include <iostream>
+
 #include "time.h"
 
 class GeneralSchedule{

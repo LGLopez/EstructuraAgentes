@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<string>
+#include<fstream>
 
 #include"listexception.h"
 #include"customernode.h"

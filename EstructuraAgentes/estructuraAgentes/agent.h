@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <cstdlib>
 
 #include "name.h"
 #include "generalschedule.h"

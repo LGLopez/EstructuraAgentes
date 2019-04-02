@@ -160,12 +160,68 @@ void CustomerList::deleteAll() {
 
     }
 
-void CustomerList::writeToDisk(const std::string&) {
+void CustomerList::writeToDisk(const std::string& fileName) {
+    std::ofstream myFile;
 
+    myFile.open(fileName, myFile.trunc);
+
+    if(!myFile.is_open()){
+        std::string msg;
+        msg = "El archivo ";
+        msg+= fileName;
+        msg+= " no se pudo abrir para escritura";
+
+        throw ListException(msg);
+        }
+
+    CustomerNode* aux(anchor);
+
+    while(aux != nullptr){
+        myFile << aux->getCustomerData() << std::endl;
+
+        aux = aux->getNext();
+        }
+    myFile.close();
     }
 
-void CustomerList::readFromDisk(const std::string&) {
+void CustomerList::readFromDisk(const std::string& fileName) {
+    std::ifstream myFile;
+    Customer myCustomer;
+    CustomerNode* newNode;
+    CustomerNode* lastInserted(nullptr);
 
+    myFile.open(fileName);
+
+    if(!myFile.is_open()){
+        std::string msg;
+        msg = "El archivo ";
+        msg+= fileName;
+        msg+= " no se pudo abrir para lectura";
+
+        throw ListException(msg);
+        }
+    deleteAll();
+
+    while(myFile >> myCustomer){
+        if((newNode = new CustomerNode(myCustomer))==nullptr){
+            std::string msg("Error durante la lectura del archivo ");
+            msg += fileName;
+            msg += ", memoria no disponible para insertar en la lista";
+
+            myFile.close();
+
+            throw ListException(msg);
+            }
+
+        if(lastInserted == nullptr){
+            anchor = newNode;
+            }
+        else{
+            lastInserted->setNext(newNode);
+            }
+        lastInserted = newNode;
+        }
+    myFile.close();
     }
 
 CustomerList& CustomerList::operator=(const CustomerList& p) {

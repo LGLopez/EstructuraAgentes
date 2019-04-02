@@ -107,10 +107,10 @@ void AgentList::sortBySpeciality(AgentNode* leftEdge, AgentNode* rightEdge) {
         ptrSwapper(i,rightEdge);
         }
     if(i != leftEdge){
-        sortByName(leftEdge,i->getPrev());
+        sortBySpeciality(leftEdge,i->getPrev());
         }
     if(i != rightEdge){
-        sortByName(i->getNext(), rightEdge);
+        sortBySpeciality(i->getNext(), rightEdge);
         }
     }
 
@@ -256,7 +256,7 @@ void AgentList::sortByName() {
     }
 
 void AgentList::sortBySpeciality() {
-    sortByName(header->getNext(), header->getPrev());
+    sortBySpeciality(header->getNext(), header->getPrev());
     }
 
 void AgentList::deleteAll() {
@@ -273,12 +273,99 @@ void AgentList::deleteAll() {
     header->setPrev(header);
     }
 
-void AgentList::writeToDisk(const std::string&) {
+void AgentList::writeToDisk(const std::string& fileName) {
+    std::ofstream myFile;
 
+    myFile.open(fileName, myFile.trunc);
+
+    if(!myFile.is_open()){
+        std::string msg;
+        msg = "El archivo ";
+        msg+= fileName;
+        msg+= " No se pudo abrir para escritura";
+
+        throw ListException(msg);
+        }
+
+    system("del *.customer");
+
+    AgentNode* aux(header->getNext());
+
+    while(aux != header){
+        myFile << aux->getData() << std::endl;
+
+        try{
+            aux->getData().getCustomerList().writeToDisk(aux->getData().getEmployeeNumber() + ".customer");
+            }
+        catch(ListException ex){
+            std::string msg;
+            msg = "Error al intentar escribir clientes\n";
+            msg+= "Error reportado: ";
+            msg+= ex.what();
+
+            myFile.close();
+
+            throw ListException(msg);
+            }
+        aux = aux->getNext();
+        }
+    myFile.close();
     }
 
-void AgentList::readFromDisk(const std::string&) {
+void AgentList::readFromDisk(const std::string& fileName) {
+    std::ifstream myFile;
 
+    Agent myAgent;
+    AgentNode* newNode;
+
+    myFile.open(fileName);
+
+    if(!myFile.is_open()){
+        std::string msg;
+
+        msg = "El archivo ";
+        msg+= fileName;
+        msg+= " no se pudo abrir para lectura";
+
+        throw ListException(msg);
+        }
+
+    deleteAll();
+
+    try{
+        while(myFile >> myAgent){
+            myAgent.getCustomerList().readFromDisk(myAgent.getEmployeeNumber() + ".subject");
+
+            newNode = new AgentNode(myAgent);
+
+            newNode->setPrev(header->getPrev());
+            newNode->setNext(header);
+
+            header->getPrev()->setNext(newNode);
+            header->setPrev(newNode);
+            }
+        }
+    catch(nodeException ex){
+        std::string msg("Error durante la lectura del archivo ");
+        msg+= fileName;
+        msg+= ", error: ";
+        msg+= ex.what();
+
+        myFile.close();
+
+        throw ListException(msg);
+        }
+    catch(ListException ex){
+        std::string msg("Error durante la lectura del archivo ");
+        msg+= fileName;
+        msg+= ", error: ";
+        msg+= ex.what();
+
+        myFile.close();
+
+        throw ListException(msg);
+        }
+    myFile.close();
     }
 
 AgentList& AgentList::operator=(const AgentList& l) {

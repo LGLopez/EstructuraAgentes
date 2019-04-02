@@ -71,17 +71,20 @@ bool Customer::operator<(const Customer& aCustomer) const{
     }
 
 std::ostream& operator << (std::ostream& os, Customer& aCustomer){
-//    os << aCustomer.name << std::endl;
-//    os << aCustomer.callTime << std::endl;
-//    os << aCustomer.duration;
-//
-//    return os;
+    os << aCustomer.name << std::endl;
+    os << aCustomer.callTime << std::endl;
+    os << aCustomer.duration;
+
+    return os;
     }
 
 std::istream& operator >> (std::istream& is, Customer& aCustomer){
-//    is >> aCustomer.name;
-//    is >> aCustomer.callTime;
-//    is >> aCustomer.duration;
-//
-//    return is;
+    std::string myStr;
+
+    is >> aCustomer.name;
+    is >> aCustomer.callTime;
+    getline(is, myStr);
+    aCustomer.duration = atoi(myStr.c_str());
+
+    return is;
     }

@@ -57,3 +57,18 @@ bool GeneralSchedule::operator<(const GeneralSchedule& aGeneralSchedule) const {
     return (endTime < aGeneralSchedule.getEndTime()) and (startTime < aGeneralSchedule.getStartTime());
     }
 
+
+std::ostream& operator << (std::ostream& os, GeneralSchedule& aSchedule){
+    os << aSchedule.startTime << std::endl;
+    os << aSchedule.endTime;
+
+    return os;
+    }
+
+std::istream& operator >> (std::istream& is, GeneralSchedule& aSchedule){
+    is >> aSchedule.startTime;
+    is >> aSchedule.endTime;
+
+    return is;
+    }
+

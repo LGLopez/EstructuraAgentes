@@ -6,7 +6,7 @@ void AgentMenu::keyToContinue() {
     }
 
 void AgentMenu::mainMenu(AgentList& aAgentList) {
-    unsigned int option;
+    unsigned int option,delAll;
 
     do {
         system("cls");
@@ -54,8 +54,19 @@ void AgentMenu::mainMenu(AgentList& aAgentList) {
                 writeToDisk(aAgentList);
                 break;
             case 9:
-                aAgentList.deleteAll();
-                std::cout << "Todos los agentes fueron eliminados." << std::endl;
+                do {
+                    std::cout << "Esta seguro de que desea eliminar a todos los agentes [1=si,0=no]:" << std::endl;
+                    std::cin >> delAll;
+                    std::cin.ignore();
+                    if(delAll==1) {
+                        aAgentList.deleteAll();
+                        std::cout << "Todos los agentes fueron eliminados." << std::endl;
+                        }
+                    if(delAll==0) {
+                        std::cout << "Operacion cancelada." << std::endl;
+                        }
+                    }
+                while(delAll!=1 and delAll!=0);
                 keyToContinue();
                 break;
             case 10:
@@ -151,7 +162,7 @@ void AgentMenu::addAgent(AgentList& aAgentList) {
 //    while(myInt!=1 and myInt!=0);
 
 //    if(myInt == 1) {
-        new CustomerMenu(myAgent.getCustomerList());
+    new CustomerMenu(myAgent.getCustomerList());
 //        }
 
     try {
@@ -199,7 +210,7 @@ void AgentMenu::deleteAgent(AgentList& aAgentList) {
         std::cout << "Esta seguro que desea eliminar este agente [0=no,1=si]:" << std::endl;
         std::cin >> option;
         std::cin.ignore();
-        if(option == 1){
+        if(option == 1) {
             if(posToDelete == nullptr) {
                 std::cout << "El agente que ingreso no existe." << std::endl;
                 correctPosition = true;
@@ -240,7 +251,7 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
     system("cls");
 
-    if(nodeToModify == nullptr){
+    if(nodeToModify == nullptr) {
         std::cout << "El empleado no existe." << std::endl;
         return;
         }
@@ -257,7 +268,7 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
 
         switch(opt) {
             case 1:
-                do{
+                do {
                     system("cls");
 
                     std::cout << "\t\tModificar empleado" << std::endl << std::endl;
@@ -274,7 +285,7 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
                     std::cin >> optModify;
                     std::cin.ignore();
 
-                    switch(optModify){
+                    switch(optModify) {
                         case 1:
                             std::cout << "Ingrese la correccion del nombre (apellido,nombre):" << std::endl;
                             getline(std::cin, myStr,',');
@@ -339,7 +350,8 @@ void AgentMenu::modifyAgent(AgentList& aAgentList) {
                             std::cout << "La opcion que eligio no es correcta, ingrese una nueva opcion:"<<std::endl;
                             keyToContinue();
                         }
-                    }while(optModify != 7);
+                    }
+                while(optModify != 7);
                 break;
 
             case 2:
@@ -363,7 +375,7 @@ void AgentMenu::showList(AgentList& aAgentList) {
 
     system("cls");
 
-    if(!aAgentList.isEmpty()){
+    if(!aAgentList.isEmpty()) {
         std::cout << "\t\tLista de agentes" << std::endl << std::endl;
 
         do {
@@ -380,13 +392,13 @@ void AgentMenu::showList(AgentList& aAgentList) {
 
         std::cout << std::endl << std::endl;
         }
-    else{
+    else {
         std::cout << "No hay agentes en la lista" << std::endl << std::endl;
         }
     keyToContinue();
     }
 
-void AgentMenu::searchAgent(AgentList& aAgentList){
+void AgentMenu::searchAgent(AgentList& aAgentList) {
     Agent agentToFind;
     Name nameToFind;
     std::string myStr;
@@ -417,7 +429,7 @@ void AgentMenu::sortList(AgentList& aAgentList) {
     std::cin >> opt;
     std::cin.ignore();
 
-    switch(opt){
+    switch(opt) {
         case 1:
             std::cout << "Ordenando..." << std::endl;
             aAgentList.sortByName();
@@ -440,12 +452,45 @@ void AgentMenu::sortList(AgentList& aAgentList) {
         }
     }
 
-void AgentMenu::writeToDisk(AgentList&) {
+void AgentMenu::writeToDisk(AgentList& aAgentList) {
+    system("cls");
 
+    std::cout << "Escribiendo al disco..." << std::endl;
+
+    try {
+        aAgentList.writeToDisk("List.agent");
+        }
+    catch(ListException ex) {
+        std::cout << "Algo malo sucedio al tratar de escribir al disco" << std::endl;
+        std::cout << "El sistem dice: " << ex.what() << std::endl << std::endl;
+
+        std::cout << "Tratando seguir con la ejecucion del programa..." << std::endl << std::endl;
+
+        keyToContinue();
+
+        return;
+        }
+    std::cout << "Archivo guardado con exito"<< std::endl << std::endl;
+
+    keyToContinue();
     }
 
-void AgentMenu::readFromDisk(AgentList&) {
+void AgentMenu::readFromDisk(AgentList& aAgentList) {
+    system("cls");
 
+    std::cout << "Leyendo del disco...";
+
+    try {
+        aAgentList.readFromDisk("List.agent");
+        }
+    catch(ListException ex){
+        std::cout << "No se pudo leer el archivo" << std::endl;
+        std::cout << "El sistema reporta: " << ex.what() << std::endl;
+        keyToContinue();
+        return;
+        }
+    std::cout << "El archivo fue cargado a la lista exitosamente." << std::endl;
+    keyToContinue();
     }
 
 void AgentMenu::exit() {

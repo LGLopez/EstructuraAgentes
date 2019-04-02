@@ -126,5 +126,29 @@ bool Agent::operator>=(const Agent& aAgent) const {
     }
 
 
-std::istream& operator >> (std::istream&, Agent&){}
-std::ostream& operator << (std::ostream&, Agent&){}
+std::istream& operator >> (std::istream& is, Agent& aAgent){
+    std::string myStr;
+
+    is >> aAgent.name;
+    is >> aAgent.schedule;
+    getline(is, myStr);
+    aAgent.employeeNumber = atoi(myStr.c_str());
+    getline(is, myStr);
+    aAgent.extensionNumber = atoi(myStr.c_str());
+    getline(is, myStr);
+    aAgent.workedHours = atoi(myStr.c_str());
+    getline(is, aAgent.speciality);
+
+    return is;
+    }
+
+std::ostream& operator << (std::ostream& os, Agent& aAgent){
+    os << aAgent.name << std::endl;
+    os << aAgent.schedule << std::endl;
+    os << aAgent.employeeNumber << std::endl;
+    os << aAgent.extensionNumber << std::endl;
+    os << aAgent.workedHours << std::endl;
+    os << aAgent.speciality;
+
+    return os;
+    }

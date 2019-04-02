@@ -2,6 +2,8 @@
 #define CUSTOMER_H_INCLUDED
 
 #include <string>
+#include <cstdlib>
+#include <iostream>
 
 #include "name.h"
 #include "time.h"
@@ -36,8 +38,8 @@ public:
     bool operator <= (const Customer&)const;
     bool operator < (const Customer&)const;
 
-    friend std::ostream& operator << (const std::ostream&, Customer&);
-    friend std::istream& operator >> (const std::istream&, Customer&);
+    friend std::ostream& operator << (std::ostream&, Customer&);
+    friend std::istream& operator >> (std::istream&, Customer&);
 };
 
 #endif // CUSTOMER_H_INCLUDED

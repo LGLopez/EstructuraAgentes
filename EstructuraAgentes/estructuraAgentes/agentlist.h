@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<string>
+#include<fstream>
 
 #include"agent.h"
 #include"agentnode.h"

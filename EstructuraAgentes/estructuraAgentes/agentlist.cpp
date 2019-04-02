@@ -295,7 +295,7 @@ void AgentList::writeToDisk(const std::string& fileName) {
         myFile << aux->getData() << std::endl;
 
         try{
-            aux->getData().getCustomerList().writeToDisk(aux->getData().getEmployeeNumber() + ".customer");
+            aux->getData().getCustomerList().writeToDisk(std::to_string(aux->getData().getEmployeeNumber()) + ".customer");
             }
         catch(ListException ex){
             std::string msg;
@@ -334,7 +334,7 @@ void AgentList::readFromDisk(const std::string& fileName) {
 
     try{
         while(myFile >> myAgent){
-            myAgent.getCustomerList().readFromDisk(myAgent.getEmployeeNumber() + ".subject");
+            myAgent.getCustomerList().readFromDisk(std::to_string(myAgent.getEmployeeNumber()) + ".customer");
 
             newNode = new AgentNode(myAgent);
 

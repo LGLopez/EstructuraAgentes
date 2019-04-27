@@ -478,7 +478,7 @@ void AgentMenu::writeToDisk(AgentList& aAgentList) {
 void AgentMenu::readFromDisk(AgentList& aAgentList) {
     system("cls");
 
-    std::cout << "Leyendo del disco...";
+    std::cout << "Leyendo del disco..." << std::endl;
 
     try {
         aAgentList.readFromDisk("List.agent");

@@ -185,7 +185,7 @@ void AgentList::deleteData(AgentNode* pos) {
         throw ListException("Posicion invalida, deleteData");
         }
     pos->getPrev()->setNext(pos->getNext());
-    pos->getNext()->setNext(pos->getPrev());
+    pos->getNext()->setPrev(pos->getPrev());
 
     delete pos;
     }
